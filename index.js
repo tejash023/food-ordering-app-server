@@ -38,9 +38,6 @@ app.get("/api/menu", (req, res) => {
   const { lat, lng, restaurantId } = req.query;
   console.log(req.query);
 
-  /* OLD SWIGGY API
-  const url = `https://www.swiggy.com/dapi/menu/v4/full?lat=${lat}&lng=${lng}&menuId=${menuId}`;
-  */
 
   const url = `https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=${lat}&lng=${lng}&submitAction=ENTER&restaurantId=${restaurantId}`;
 
@@ -68,7 +65,7 @@ app.get("/api/menu", (req, res) => {
 });
 
 app.get("/", (req, res) => {
-  res.json({ test: "hello instafood lovers !!! " });
+  res.json({ test: "Welcome to Go Foods!" });
 });
 app.listen(port, () => {
   console.log(`Server is listening on port ${port}`);
