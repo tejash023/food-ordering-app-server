@@ -4,8 +4,8 @@ import { getRestaurant, getMenu } from "../controller/api-controller.js";
 
 const routes = express.Router();
 
-routes.get("/api/restaurants", getRestaurant);
+routes.get("/restaurants", getRestaurant);
 
-routes.get("/api/menu", getMenu);
+routes.get("/menu", getMenu);
 
 export default routes;
