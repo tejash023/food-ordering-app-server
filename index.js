@@ -1,6 +1,6 @@
-const express = require("express");
-const cors = require("cors");
-const fetch = require("cross-fetch");
+import express from "express";
+import cors from "cors";
+import fetch from "cross-fetch";
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -8,7 +8,7 @@ app.use(cors());
 
 app.get("/api/restaurants", (req, res) => {
   const { lat, lng } = req.query;
-  console.log(req.query);
+
   const url = `https://www.swiggy.com/dapi/restaurants/list/v5?lat=${lat}&lng=${lng}&page_type=DESKTOP_WEB_LISTING`;
 
   fetch(url, {
