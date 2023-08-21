@@ -67,7 +67,7 @@ app.get("/api/menu", (req, res) => {
 app.get("/api/category", (req, res) => {
   const { lat, lng, collectionId } = req.query;
 
-  const url = `https://www.swiggy.com/dapi/restaurants/list/v5?lat=${lat}&lng=${lng}&collection=${collectionId}&isNewCollectionFlow=true&sortBy=&filters=&type=rcv2&offset=0&page_type=null`;
+  const url = `https://www.swiggy.com/dapi/restaurants/list/v5?lat=${lat}&lng=${lng}&collection=${collectionId}&isNewCollectionFlow=true`;
 
   fetch(url, {
     headers: {
